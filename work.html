@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noe's portfolio ⋆˚࿔</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/works.css">
+</head>
+
+<body>
+    <header>
+<nav class="navbar">
+
+    <a href="index.html" class="logo">
+        noe ⋆˚࿔
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</nav>
+    </header>
+
+    <section class="page-banner">
+        <h1>My Projects</h1>
+        <p>
+            Here are some of the projects I've built
+            throughout my journey as a Computer
+            Science student.
+
+            Click any project to learn more.
+        </p>
+        <div id="project-filter"></div>
+    </section>
+
+    <section class="projects-section">
+        <div class="projects-grid">
+            <article class="project-card" data-category="python" onclick="openModal('khit-modal')">
+                <img
+                    src="images/khit!.png"
+                    alt="khit">
+                <div class="project-content">
+                    <span class="project-category">GAME DEVELOPMENT</span>
+                    <h3>khit!</h3>
+                    <p>Click to view project details.</p>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="uiux" onclick="openModal('kargahan-modal')">
+                <img
+                    src="images/kargahan banner.png"
+                    alt="khit">
+                <div class="project-content">
+                    <span class="project-category">UI/UX DESIGN</span>
+                    <h3>Kargahan</h3>
+                    <p>Click to view project details.</p>
+                </div>
+            </article>  
+
+            <article class="project-card" data-category="java" onclick="openModal('borrowbuddy-modal')">
+                <img
+                    src="images/BORROWBUDDY.png"
+                    alt="borrowbudy">
+                <div class="project-content">
+                    <span class="project-category">JAVA DEVELOPMENT</span>
+                    <h3>BorrowBuddy</h3>
+                    <p>Click to view project details.</p>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="java" onclick="openModal('ht-modal')">
+                <div class="img-placeholder"><i class="fa-solid fa-code"></i></div>
+                <div class="project-content">
+                    <span class="project-category">JAVA DEVELOPMENT</span>
+                    <h3>Hotel Transylvania</h3>
+                    <p>Click to view project details.</p>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="web" onclick="openModal('cc-modal')">
+                <img
+                    src="images/cc.png"
+                    alt="AROMA">
+                <div class="project-content">
+                    <span class="project-category">WEB APPLICATION</span>
+                    <h3>AROMA</h3>
+                    <p>Click to view project details.</p>
+                </div>
+            </article> 
+
+        </div>
+    </section>
+
+    <!--- popups --->
+
+<div class="modal" id="khit-modal">
+    <div class="modal-content">
+        <button
+            class="close-button"
+            onclick="closeModal('khit-modal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            class="modal-banner"
+            src="images/khit!.png"
+            alt="kargahan">
+
+        <div class="modal-body">
+            <span class="project-category">Python Game</span>
+            <h2>khit!</h2>
+            <p>A Wordle-inspired word puzzle game built with Python, featuring XP rewards, daily bonuses, and color themes.</p>
+
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Json</span>
+            </div>
+
+            <h3>Game Features</h3>
+            <p>Wordle guessing system</p>
+            <p>Customizable theme</p>
+            <p>Choose between diffreent word lengths</p>
+            <p>XP rewards</p>
+
+            <h3>Project Gallery</h3>
+
+            <div class="gallery">
+                <img src="images/khit! - Main Menu.png">
+                <img src="images/khit! - Gameplay 2.png">
+                <img src="images/khit! - Game modes.png">
+            </div>
+            <div class="modal-buttons">
+                <a href="https://github.com/strawbwiees/Khit"
+                    target="_blank"
+                    class="primary-button">
+                    Go to project's repository
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="kargahan-modal">
+    <div class="modal-content">
+        <button
+            class="close-button"
+            onclick="closeModal('kargahan-modal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            class="modal-banner"
+            src="images/kargahan banner.png"
+            alt="kargahan">
+
+        <div class="modal-body">
+            <span class="project-category">UI/UX</span>
+            <h2>Kargahan (Web Application Coming Soon)</h2>
+            <p>A modern, Filipino-inspired UI for Kargahan, an anonymous social platform focused on emotional expression, empathy, and community support.</p>
+
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+                <span>Python</span>
+                <span>Json</span>
+            </div>
+
+            <h3>Project Gallery</h3>
+
+            <div class="gallery">
+                <img src="images/kargahan1.png">
+                <img src="images/karagahan2.png">
+                <img src="images/kargahan3.png">
+            </div>
+            <div class="modal-buttons">
+                <a href="https://design.penpot.app/#/view?file-id=83dd9eca-2062-81d6-8008-59fc53d1dd33&page-id=83dd9eca-2062-81d6-8008-59fc53d1dd34&section=interactions&index=0&share-id=4ff7ff5f-2875-80f9-8008-5a6bb622f6b0"
+                    target="_blank"
+                    class="primary-button">
+                    Go to design
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="borrowbuddy-modal">
+    <div class="modal-content">
+        <button
+            class="close-button"
+            onclick="closeModal('borrowbuddy-modal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            class="modal-banner"
+            src="images/BORROWBUDDY.png"
+            alt="kargahan">
+
+        <div class="modal-body">
+            <span class="project-category">JAVA DEVELOPMENT</span>
+            <h2>BorrowBuddy</h2>
+            <p>A desktop Library Management System built with Java Swing
+                to improve the efficiency of library operations.
+                It enables librarians to organize book inventories,
+                monitor borrowing and return records and manage library
+                information through a graphical user interface.
+            </p>
+
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+                <span>Java (GUI)</span>
+                <span>MySQL</span>
+            </div>
+
+            <h3>Project Gallery</h3>
+
+            <div class="gallery">
+                <img src="images/BORROWBUDDY1.png">
+                <img src="images/BORROWBUDDY2.png">
+                <img src="images/BORROWBUDDY4.png">
+            </div>
+            <div class="modal-buttons">
+                <a href="https://github.com/strawbwiees/BorrowBuddy"
+                    target="_blank"
+                    class="primary-button">
+                    Go to project's repository
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="ht-modal">
+    <div class="modal-content">
+        <button
+            class="close-button"
+            onclick="closeModal('ht-modal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="img-placeholder"><i class="fa-solid fa-code"></i></div>
+        <div class="modal-body">
+            <span class="project-category">JAVA DEVELOPMENT</span>
+            <h2>Hotel Transylvania</h2>
+            <p>A Java-based Hotel Booking System developed to simplify room reservations and guest management.
+                It allows users to book rooms, manage reservations,
+                and organize hotel records through a structured and
+                efficient console-based application.
+            </p>
+
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+                <span>Java</span>
+                <span>OOP</span>
+            </div>
+
+            <h3>Other Collaborators</h3>
+            <ul class="collaborators">
+            <li>Mr. Hans Philip Pasion</li>
+            <li>Mr. Kirk Stanley Tan</li>
+            <li>Ms. Ashlyn Jam Torres</li>
+            </ul>
+
+            <h3>Project Gallery</h3>
+
+            <div class="gallery">
+                <img src="images/BORROWBUDDY1.png">
+                <img src="images/BORROWBUDDY2.png">
+                <img src="images/BORROWBUDDY4.png">
+            </div>
+            <div class="modal-buttons">
+                <a href="https://github.com/strawbwiees/Hotel-Transylvania-Java"
+                    target="_blank"
+                    class="primary-button">
+                    Go to project's repository
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="cc-modal">
+    <div class="modal-content">
+        <button
+            class="close-button"
+            onclick="closeModal('cc-modal')">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <img
+            class="modal-banner"
+            src="images/cc.png"
+            alt="AROMA">
+
+        <div class="modal-body">
+            <span class="project-category">WEB APPLICATION</span>
+            <h2>AROMA: Administrative Retail Ordering Management System</h2>
+            <p>A web-based platform developed to modernize and digitalize the
+                operations of Coffee Chapters, a study lounge cafe.
+                The system allows customers to browse the cafe menu,
+                place orders online, and make contactless payments.
+                On the admin side, the system provides a cashier-facing order
+                management panel and an inventory management module that
+                enables staff to monitor stock levels, process orders efficiently,
+                and generate sales reports.</p>
+
+            <h3>Technologies Used</h3>
+            <div class="tech-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JS</span>
+                <span>MYSQL</span>
+            </div>
+
+            <h3>Collaborators</h3>
+            <ul class="collaborators">
+            <li>Mr. Xedric Andrei Viar</li>
+            <li>Ms. Ashlyn Jam Torres</li>
+            <li>Mr. Joshua Navidad</li>
+            </ul>
+
+            <h3>Project Gallery</h3>
+            <div class="gallery">
+                <img src="images/BORROWBUDDY1.png">
+                <img src="images/BORROWBUDDY2.png">
+                <img src="images/BORROWBUDDY4.png">
+            </div>
+            <div class="modal-buttons">
+                <a href="https://strawbwiees.github.io/cc/index.html"
+                    target="_blank"
+                    class="primary-button">
+                    View project
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Noella Mariz Beltran</h3>
+                <p>
+                    Creating thoughtful digital
+                    experiences through code
+                    and creativity.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Works</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+<div class="footer-column">
+                <h4>
+                    Featured Projects
+                </h4>
+                <p>khit!</p>
+                <p>Kargahan</p>
+                <p>BorrowBuddy</p>
+                <p>Coffee Chapters</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>
+                    Connect
+                </h4>
+                <div class="social-icons">
+                    <a href="https://github.com/strawbwiees">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/noella-mariz-beltran-884472406">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="mailto:noellamarizbeltran01@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Noella Mariz Beltran.
+            All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="react/app.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
