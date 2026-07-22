@@ -1,6 +1,3 @@
-/* ==========================================
-   PROFILE IMAGE + FLOATING DOODLES
-========================================== */
 
 .hero-image{
     position: relative;
@@ -17,10 +14,6 @@
     z-index: 5;
 }
 
-/* Doodles */
-
-/* Doodles */
-
 .hero-image .doodle{
     position: absolute;
     width: 100px;    
@@ -35,7 +28,6 @@
     animation: float 5s ease-in-out infinite;
 }
 
-/* Position each doodle */
 
 .d1{
     top:-30px;
@@ -92,7 +84,6 @@
     animation-delay:3.5s;
 }
 
-/* Floating Animation */
 
 @keyframes float{
 
