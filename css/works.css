@@ -1,0 +1,701 @@
+/* ==========================================================
+   WORKS PAGE
+========================================================== */
+
+.page-banner {
+    padding: 50px;
+    margin: 10px;
+}
+
+.page-banner p{
+    padding: 0px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.projects-section {
+    margin-top: -130px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.project-card {
+    background: #FFFDFB;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .35s ease;
+    box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    width: 100%;
+    height: 450px;              
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary-dark);
+    margin-top: 0;   
+    margin-bottom: 50px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-placeholder{
+    width: 100%;
+    height: 250px;
+    background: #EC8FB5;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-placeholder i {
+    font-size: 5rem;
+    color: #ffff;
+}
+
+.project-content {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-category {
+    display: inline-block;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #EC6FA3;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.project-content h3 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.project-content p {
+    color: #75636B;
+    font-size: 1.1rem;
+    margin-top: auto;
+}
+
+/* ==========================================================
+   MODAL OVERLAY
+========================================================== */
+
+.modal{
+
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content {
+    background: #FFFDFB;
+    width: 90%;
+    max-width: 700px;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-radius: 30px;
+    padding: 25px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    animation: slideUp .3s ease;
+
+}
+
+.close-button{
+
+    position:absolute;
+    padding: 5px;
+    right:25px;
+    top:25px;
+    border:none;
+    background: var(--primary-dark);
+    border-radius: 20%;
+    font-size:2rem;
+    cursor:pointer;
+
+}
+
+.modal-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    display: block;
+margin: 0 auto 25px;
+}
+
+.modal-body h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.modal-body h3 {
+    font-size: 1.3rem;
+    margin-top: 30px;
+}
+
+.modal-body p{
+    font-weight: 500;
+    color: var(--text)
+}
+
+.collaborators{
+    display: list-item;
+    list-style: disc;
+    padding-left: 25px;
+    margin: 15px 0;
+}
+
+.tech-stack{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:25px 0;
+}
+
+.tech-stack span{
+    background:#F9D8E6;
+    padding:10px 18px;
+    border-radius:30px;
+    color: var(--primary-dark) ;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.modal-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:35px;
+}
+
+/* ==========================================================
+   TECH STACK
+========================================================== */
+
+.tech-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+}
+
+.tech-stack span {
+
+    background: var(--secondary);
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    color: var(--primary-dark);
+
+}
+
+/* ==========================================================
+   IMAGE GALLERY
+========================================================== */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.gallery img {
+
+    border-radius: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+
+}
+
+.gallery img:hover {
+
+    transform: scale(1.03);
+
+}
+
+/* ==========================================================
+   MODAL BUTTONS
+========================================================== */
+
+.modal-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+}
+
+.modal-buttons a {
+
+    text-decoration: none;
+
+}
+
+/* ==========================================================
+   MODAL SCROLLBAR
+========================================================== */
+
+.modal-content::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+.modal-content::-webkit-scrollbar-track {
+
+    background: #f6f6f6;
+
+}
+
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+    margin-top: 80px;
+    background: var(--secondary);
+    padding: 60px 40px 25px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+    margin-bottom: 18px;
+}
+
+.footer-column p {
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-light);
+    transition: var(--transition);
+}
+
+.footer-column a:hover {
+    color: var(--primary-dark);
+    padding-left: 6px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-light);
+}
+
+/* ==========================================================
+   FADE ANIMATION
+========================================================== */
+
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all .8s ease;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 992px){
+
+    .page-banner{
+        text-align:center;
+        padding:50px 30px;
+    }
+
+    .page-banner h1{
+        font-size:2.7rem;
+    }
+
+    .projects-section{
+        margin-top:-70px;
+    }
+
+    .projects-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px;
+        padding:20px;
+    }
+
+    .project-card{
+        height:430px;
+        margin-bottom:20px;
+    }
+
+    .project-card img,
+    .img-placeholder{
+        height:220px;
+    }
+
+    .modal-content{
+        width:92%;
+        max-height:80vh;
+    }
+
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+    .page-banner{
+        padding:40px 20px;
+        text-align:center;
+    }
+
+    .page-banner h1{
+        font-size:2.2rem;
+        margin-top:0;
+    }
+
+    .page-banner p{
+        font-size:1rem;
+    }
+
+    .projects-section{
+        margin-top:-40px;
+    }
+
+    .projects-grid{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        justify-items:center;
+
+    }
+
+    .project-card{
+
+        width:100%;
+
+        max-width:420px;
+
+        height:auto;
+
+        margin-bottom:15px;
+
+    }
+
+    .project-card img,
+    .img-placeholder{
+
+        height:220px;
+
+    }
+
+    .project-content{
+
+        padding:22px;
+
+    }
+
+    .project-content h3{
+
+        font-size:1.7rem;
+
+    }
+
+    .project-content p{
+
+        font-size:1rem;
+
+    }
+
+    .modal-content{
+
+        width:94%;
+
+        max-height:85vh;
+
+        padding:20px;
+
+    }
+
+    .modal-body h2{
+
+        font-size:1.8rem;
+
+    }
+
+    .modal-body h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .modal-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .modal-buttons a{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+    .footer-container{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .social-icons{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:480px){
+
+
+    .page-banner h1{
+
+        font-size:1.9rem;
+
+    }
+
+    .page-banner p{
+
+        font-size:.95rem;
+
+    }
+
+    .projects-grid{
+
+        padding:10px;
+
+    }
+
+    .project-card{
+
+        max-width:100%;
+
+        border-radius:24px;
+
+    }
+
+    .project-card img,
+    .img-placeholder{
+
+        height:190px;
+
+    }
+
+    .img-placeholder i{
+
+        font-size:4rem;
+
+    }
+
+    .project-content{
+
+        padding:18px;
+
+    }
+
+    .project-content h3{
+
+        font-size:1.5rem;
+
+    }
+
+    .project-category{
+
+        font-size:.8rem;
+
+    }
+
+    .modal-content{
+
+        padding:15px;
+
+        border-radius:20px;
+
+    }
+
+    .modal-banner{
+
+        border-radius:15px;
+
+    }
+
+    .tech-stack{
+
+        gap:10px;
+
+    }
+
+    .tech-stack span{
+
+        font-size:.85rem;
+
+        padding:8px 14px;
+
+    }
+
+}
