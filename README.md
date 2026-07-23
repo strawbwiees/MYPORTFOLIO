@@ -27,16 +27,18 @@ portfolio/
 ├── contact.html
 │
 ├── css/
-│   ├── style.css
+│   ├── main.css
 │   ├── about.css
 │   ├── work.css
-│   ├── contact.css
-│   └── responsive.css
+│   ├── contacts.css
+│   └── otherdesigns.css
 │
 ├── js/
 │   ├── script.js
-│   └── react/
-│
+│   
+├── react/
+│   ├── app.js
+│   
 ├── images/
 │
 └── README.md
