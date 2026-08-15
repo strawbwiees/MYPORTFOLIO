@@ -1,4 +1,4 @@
-# Noe's Space
+# noe's space
 
 A personal portfolio website showcasing my projects, skills, and journey as a Computer Science student. Designed and developed to reflect my passion for frontend development, UI/UX design, and creating thoughtful digital experiences.
 
@@ -10,7 +10,7 @@ A personal portfolio website showcasing my projects, skills, and journey as a Co
 
 ## About
 
-**Noe's Space** serves as my digital portfolio where I introduce myself, showcase my academic and personal projects, and share my technical skills. The website features a playful aesthetic inspired by doodles while maintaining a clean and responsive user experience.
+**noe's space** serves as my digital portfolio where I introduce myself, showcase my academic and personal projects, and share my technical skills. The website features a playful aesthetic inspired by doodles while maintaining a clean and responsive user experience.
 
 This portfolio was built to showcase my projects and  strengthen my frontend development skills and practice creating responsive, interactive websites from scratch.
 
@@ -50,7 +50,7 @@ portfolio/
 
 **Noella Mariz Beltran**
 
-Computer Science Student | Frontend Developer | UI/UX Enthusiast
+Computer Science Student | Frontend Developer | UI/UX Enthusiast | Aspiring Web & Game Developer
 
 Portfolio: https://noesspace.vercel.app/
 
